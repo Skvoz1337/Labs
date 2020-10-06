@@ -1,6 +1,8 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<conio.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
+#include <locale.h>
+#include <string.h>
 void zadanie1_2_4(){
 	int i, raz, N[6][6];
 		int max = 0;
@@ -46,10 +48,44 @@ void zadanie3(){
 	printf("%d   ",m[i]);
 	}
 }
+void zadanie5(){
+char s[20];
+	struct{
+		char famil[20];
+		char name [20];
+		char facult[20];
+		char nomer[5];
+	}stud[3];
+
+	printf("\nZadanie 5\n");
+
+	for(int i = 0; i < 3; i++){
+		printf("Vvedite family:");
+			scanf("%20s",stud[i].famil);
+		printf("Vvedite name:");
+			scanf("%20s",stud[i].name);
+		printf("Vvedite faculty:");
+			scanf("%20s",stud[i].facult);
+		printf("Vvedite nomer knigi:");
+			scanf("%s",stud[i].nomer);
+		}
+	int check = 0;
+	printf("Search/");
+		scanf("%s", &s);
+		for(int i = 0; i < 3; i++){
+			if(strcmp(stud[i].famil, s) == 0 || strcmp(stud[i].name, s) == 0 || strcmp(stud[i].facult, s) == 0 || strcmp(stud[i].nomer, s) == 0){
+				printf("Naideno: %s %s %s %s\n", stud[i].famil, stud[i].name, stud[i].facult, stud[i].nomer);
+				check++;
+			}
+		}
+		if(check == 0)
+			printf("Poprobyite zanogo");
+}
   int main()
 	{
 		zadanie1_2_4();
 		zadanie3();
+		zadanie5();
 	   getch ();
 	   return 0;
 
