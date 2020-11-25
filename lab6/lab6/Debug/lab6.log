@@ -1,0 +1,3 @@
+﻿  lab6.cpp
+D:\2 Семестр 1 курс\lab6\lab6\lab6.cpp(39,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  lab6.vcxproj -> D:\2 Семестр 1 курс\lab6\Debug\lab6.exe
